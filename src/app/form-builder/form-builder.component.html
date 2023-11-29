@@ -1,0 +1,43 @@
+<div class="container-main">
+   <section class="container-col">
+      <div class="flex-div">
+         <h2 class="heading">Table 1</h2>
+         <div class="example-list" (cdkDropListDropped)="drop($event)"
+         cdkDropList
+         #todoList="cdkDropList"
+         [cdkDropListData]="element"
+         [cdkDropListConnectedTo]="[doneList]"
+         class="example-list"
+         (cdkDropListDropped)="drop($event)"
+         >
+         <div class="table-item" cdkDrag *ngFor="let movie of element;">
+            <div class="example-box" >{{movie}}</div>
+         </div>
+      </div>
+      <button mat-raised-button color="primary" (click)="openDialog()">Open Pop Up</button>
+</div>
+</section>
+<section class="container-col">
+   <div class="flex-div">
+      <h2 class="heading">Table 2</h2>
+      <div  class="example-list" cdkDropList
+      #doneList="cdkDropList"
+      [cdkDropListData]="done"
+      [cdkDropListConnectedTo]="[todoList]"
+      (cdkDropListDropped)="drop($event)">
+      <div class="table-item" cdkDrag *ngFor="let item of done;">
+         <div class="example-box" >{{item}}</div>
+      </div>
+   </div>
+   <button mat-raised-button color="primary" (click)="openDialog()">Open Pop Up</button>
+   </div>
+</section>
+<section class="container-col">
+   <div class="flex-div">
+      <h2 class="heading">Table 3</h2>
+      <!-- {{textBox}} -->
+     111 <pre>{{tempData|json}}</pre>
+      <button mat-raised-button color="primary" (click)="openDialog()">Open Pop Up</button>
+   </div>
+</section>
+</div>

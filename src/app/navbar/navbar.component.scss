@@ -1,0 +1,38 @@
+.navbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 9999999;
+  
+    .logo {
+      color: white;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  
+      li {
+        margin-right: 20px;
+  
+        a {
+          color: white;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1.2em;
+  
+          &:hover {
+            color: #ddd;
+          }
+        }
+      }
+    }
+  }
