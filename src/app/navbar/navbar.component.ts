@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { routes } from 'src/app/app-routing.module';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -7,5 +7,8 @@ import { routes } from 'src/app/app-routing.module';
 })
 export class NavbarComponent {
   constructor() {
+  }
+  refreshPage(event: Event) {
+    location.href = 'http://localhost:4200/';
   }
 }

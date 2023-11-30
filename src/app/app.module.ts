@@ -17,6 +17,7 @@ import { MatListModule } from '@angular/material/list';
 import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import { ReativeFormComponent } from './reative-form/reative-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReativeFormComponent } from './reative-form/reative-form.component';
     MatInputModule,
     MatListModule,
     CdkDropList, CdkDrag,
-    TextFieldModule
+    TextFieldModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
