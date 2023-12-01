@@ -14,10 +14,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
-import {CdkDragDrop, CdkDropList, CdkDrag, moveItemInArray} from '@angular/cdk/drag-drop';
-import {TextFieldModule} from '@angular/cdk/text-field';
+import { CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
+import { TextFieldModule } from '@angular/cdk/text-field';
 import { ReativeFormComponent } from './reative-form/reative-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { AutoCompleteModule } from './all-material/auto-complete/auto-complete.module';
 
 @NgModule({
   declarations: [
@@ -38,11 +40,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatInputModule,
     MatListModule,
-    CdkDropList, CdkDrag,
+    CdkDropList,
+    CdkDrag,
     TextFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    AutoCompleteModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

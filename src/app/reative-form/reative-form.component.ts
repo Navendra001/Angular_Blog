@@ -36,6 +36,6 @@ export class ReativeFormComponent {
   });
 
   onUserFormSubmit(){
-console.log('onUserFormSubmit >>> ', this.userDetailsForm.value)  
+console.log('onUserFormSubmit >>> ', this.userDetailsForm.value)
   }
 }
