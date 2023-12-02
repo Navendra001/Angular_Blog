@@ -20,6 +20,8 @@ import { ReativeFormComponent } from './reative-form/reative-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { AutoCompleteModule } from './all-material/auto-complete/auto-complete.module';
+import { MyStoreComponent } from './my-store/my-store.component';
+import { MyStoreModule } from './my-store/my-store.module';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { AutoCompleteModule } from './all-material/auto-complete/auto-complete.m
     DataFormComponent,
     FormBuilderComponent,
     ReativeFormComponent,
+    MyStoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { AutoCompleteModule } from './all-material/auto-complete/auto-complete.m
     ReactiveFormsModule,
     MatAutocompleteModule,
     AutoCompleteModule,
+    MyStoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

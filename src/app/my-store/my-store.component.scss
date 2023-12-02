@@ -1,0 +1,24 @@
+.main-container {
+  height: 100%;
+  display: flex;
+  flex:7;
+  // background-color: aqua;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+header,
+main,
+footer {
+
+  padding: 1rem;
+  border: 5px solid yellow;
+  box-shadow: 10px 5px 10px 8px orange;
+  background-color: burlywood;
+}
+header , body{
+  flex: .5;
+
+}
+main {
+  flex:6;
+}

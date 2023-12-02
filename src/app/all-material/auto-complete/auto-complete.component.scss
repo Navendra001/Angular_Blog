@@ -1,12 +1,9 @@
-
 .main-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 1rem;
   padding: 1rem;
   background-color: green;
-  height: max-content;
   align-items: center;
 }
 
@@ -21,13 +18,14 @@ section {
   padding: 20px 60px;
   margin: 1rem;
   background-color: lightgreen;
+  height: fit-content;
+  width: 90%;
 }
 
 .flex-container-row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 950px;
   min-width: 450px;
 }
 .field-div {
@@ -36,4 +34,8 @@ section {
   margin: 1rem;
   padding: 1rem;
   width: 300px;
+}
+
+.menu-btn {
+  text-decoration: underline;
 }

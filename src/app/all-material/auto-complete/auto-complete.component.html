@@ -1,22 +1,38 @@
-<header style="display: inline-flex; padding: 10px;">
-  <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
-</header>
-
-<div class="main-container">
+<div style="display: inline-flex; padding: 10px; overflow-y: auto; position: sticky;">
 
 
-  <section id="auto_complete">
-    <h1>
-      Auto Complete
-    </h1>
+
+
+  <!-- <div style=" display: grid;grid-template-columns: repeat(2, 15fr); height: 500px; overflow-y: scroll; gap: 10px;"> -->
+
+<!-- </div> -->
+  <!-- <button mat-raised-button color="primary">
+    <mat-icon>menu</mat-icon> Menu
+  </button> -->
+
+
+
+  <!-- <mat-menu #menu="matMenu">
+    <div style=" display: grid;grid-template-columns: repeat(2, 15fr); height: 500px; overflow-y: scroll; gap: 10px;">
+      <div  mat-menu-item [id]="item.key" *ngFor="let item of getComponentTitle()"
+        class="menu-btn" (click)="onButtonClick(item.key)">
+        {{ item.value }}
+      </div>
+    </div>
+  </mat-menu> -->
+</div>
+
+<div >
+
+  <section [id]="item.key" *ngFor="let item of getlComponentsVisible()">
+    {{item.value}}
+
+    <button (click)="onButtonClick('kjsdj')">lkajah ldjjdj dl   </button>
+
+    <mat-card>
+      <mat-card-content>{{allTitle | json}}</mat-card-content>
+    </mat-card>
+
   </section>
-  <section>
-    <h1>
-      Auto Complete
-    </h1>
-  </section>
+
 </div>

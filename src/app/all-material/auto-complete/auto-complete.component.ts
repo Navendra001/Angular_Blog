@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./auto-complete.component.scss'],
 })
 export class AutoCompleteComponent {
-  allMaterialComponent_Title: object = {
+  allTitle: object = {
     auto_complete_div: 'AutoComplete',
     badge_div: 'Badge',
     bottom_sheet_div: 'Bottom Sheet',
@@ -45,7 +45,7 @@ export class AutoCompleteComponent {
     tree_div: 'Tree',
   };
 
-  allMaterialComponent_Visibility: object = {
+  allVisible: object = {
     auto_complete_div: true,
     badge_div: false,
     bottom_sheet_div: false,
@@ -83,4 +83,30 @@ export class AutoCompleteComponent {
     tooltip_div: false,
     tree_div: false,
   };
+
+  getComponentTitle(): Array<any> {
+    return Object.entries(this.allTitle).map(
+      ([key, value]) => ({ key, value })
+    );
+  }
+  getlComponentsVisible(): Array<any> {
+    return Object.entries(this.allVisible).map(
+      ([key, value]) => ({ key, value })
+    );
+  }
+
+  onButtonClick(itemKey: any) {
+    console.log("onButtonClick ?>>>", itemKey);
+
+    Object.entries(this.allVisible).map(
+      ([key, value]) => {
+        if(itemKey === key){
+          value = true;
+        }
+        else {
+          value = false;
+        }
+      }
+    );
+  }
 }
